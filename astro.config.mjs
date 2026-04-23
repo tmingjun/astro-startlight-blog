@@ -23,14 +23,15 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: '指南',
-					items: [
-						{ label: '快速开始', slug: 'guides/getting-started' },
-						{ label: '参考', slug: 'guides/example' },
-					],
+					autogenerate: { directory: 'guides' },
 				},
 				{
-					label: 'linux内核',
-					autogenerate: { directory: 'linux_kernel' },
+					label: 'Linux 内核',
+					autogenerate: { directory: 'kernel' },
+				},
+				{
+					label: 'Linux 存储栈',
+					autogenerate: { directory: 'storage' },
 				},
 			],
 			customCss: ['./src/styles/custom.css'],

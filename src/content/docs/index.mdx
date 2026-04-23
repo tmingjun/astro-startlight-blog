@@ -5,12 +5,12 @@ template: splash
 hero:
   tagline: 欢迎来到我的个人文档库，这里记录着我的学习笔记、技术文档和经验总结。
   actions:
-    - text: 快速开始
-      link: /guides/getting-started/
-      icon: right-arrow
-    - text: linux内核
-      link: /linux_kernel/
-      icon: open-book
+    - text: 指南
+      link: /guides/
+    - text: Linux 内核
+      link: /kernel/
+    - text: Linux 存储栈
+      link: /storage/
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
@@ -18,16 +18,14 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 ## 开始使用
 
 <CardGrid stagger>
-	<Card title="快速开始" icon="rocket">
-		查看 [快速开始指南](/guides/getting-started/) 了解如何开始使用。
+	<Card title="Linux 内核" icon="open-book">
+		深入学习 Linux 内核机制，包括进程调度、内存管理、中断处理等。
+
+		[进入内核文档](/kernel/)
 	</Card>
-	<Card title="添加内容" icon="pencil">
-		在 `src/content/docs` 目录下添加 Markdown 或 MDX 文件来创建新页面。
-	</Card>
-	<Card title="自定义配置" icon="setting">
-		编辑 `astro.config.mjs` 文件来自定义网站配置。
-	</Card>
-	<Card title="部署上线" icon="rocket">
-		将你的文档库部署到 GitHub Pages、Vercel 或 Netlify。
+	<Card title="Linux 存储栈" icon="rocket">
+		探索 Linux 存储 IO 栈，从 VFS 到 Block Layer，再到 NVMe/SSD。
+
+		[进入存储文档](/storage/)
 	</Card>
 </CardGrid>

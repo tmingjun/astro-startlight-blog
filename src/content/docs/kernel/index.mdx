@@ -1,0 +1,38 @@
+---
+title: Linux 内核
+description: Linux 内核学习笔记
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## 概述
+
+本节记录 Linux 内核相关学习内容，包括进程调度、内存管理、中断处理等。
+
+## 子目录导航
+
+<CardGrid>
+	<Card title="中断下半部机制" icon="open-book">
+		kthread_worker、softirq、tasklet 等机制详解。
+	</Card>
+	<Card title="进程调度" icon="open-book">
+		CFS 调度器、实时调度类等。
+	</Card>
+	<Card title="内存管理" icon="open-book">
+		物理内存管理、虚拟内存、SLAB 分配器等。
+	</Card>
+	<Card title="网络协议栈" icon="open-book">
+		TCP/IP 协议栈、Socket 接口等。
+	</Card>
+	<Card title="同步原语RCU" icon="open-book">
+		RCU 机制、spinlock、semaphore 等。
+	</Card>
+	<Card title="设备驱动" icon="open-book">
+		字符设备、块设备驱动模型。
+	</Card>
+	<Card title="进程管理" icon="open-book">
+		进程创建、线程管理、fork/exec 等。
+	</Card>
+</CardGrid>
+
+> **提示**：左侧边栏会自动展示所有文件列表，请使用侧边栏导航到具体文档。

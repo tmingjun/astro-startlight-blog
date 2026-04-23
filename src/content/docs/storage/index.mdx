@@ -1,0 +1,38 @@
+---
+title: Linux 存储栈
+description: Linux 存储 IO 栈学习笔记
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## 概述
+
+本节记录 Linux 存储 IO 栈相关学习内容，从 VFS 到 Block Layer，再到 NVMe/SSD。
+
+## 子目录导航
+
+<CardGrid>
+	<Card title="VFS" icon="open-book">
+		虚拟文件系统、file、inode、dentry 等。
+	</Card>
+	<Card title="PageCache" icon="open-book">
+		页缓存机制、writeback、预读等。
+	</Card>
+	<Card title="BlockLayer" icon="open-book">
+		块设备层、IO 调度算法、request queue 等。
+	</Card>
+	<Card title="文件系统" icon="open-book">
+		ext4、XFS、Btrfs 等文件系统实现。
+	</Card>
+	<Card title="NVMe" icon="open-book">
+		NVMe 协议、PCIe 传输层等。
+	</Card>
+	<Card title="Multipath" icon="open-book">
+		多路径 IO、dm-multipath 等。
+	</Card>
+	<Card title="iSCSI" icon="open-book">
+		iSCSI 协议、 initiator/target 等。
+	</Card>
+</CardGrid>
+
+> **提示**：左侧边栏会自动展示所有文件列表，请使用侧边栏导航到具体文档。
