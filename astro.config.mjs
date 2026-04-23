@@ -25,11 +25,12 @@ export default defineConfig({
 					label: '指南',
 					items: [
 						{ label: '快速开始', slug: 'guides/getting-started' },
+						{ label: '参考', slug: 'guides/example' },
 					],
 				},
 				{
-					label: '参考',
-					autogenerate: { directory: 'reference' },
+					label: 'linux内核',
+					autogenerate: { directory: 'linux_kernel' },
 				},
 			],
 			customCss: ['./src/styles/custom.css'],

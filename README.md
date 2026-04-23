@@ -173,6 +173,90 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 直接连接 GitHub 仓库，平台会自动检测并部署。
 
+### Cloudflare Pages 部署
+
+#### 方式一：使用 Wrangler CLI（推荐）
+
+**1. 安装 Wrangler**
+
+```bash
+npm install -D wrangler
+```
+
+**2. 登录 Cloudflare**
+
+```bash
+npx wrangler login
+```
+浏览器会打开 Cloudflare 授权页面，点击 "Allow"。
+
+**3. 构建项目**
+
+```bash
+npm run build
+```
+
+**4. 部署到 Cloudflare Pages**
+
+```bash
+npx wrangler pages deploy dist/
+```
+
+部署后会返回一个 `.pages.dev` 域名，例如：
+```
+https://xxxx-xxxx.pages.dev
+```
+
+#### 方式二：通过 GitHub 集成（自动部署）
+
+**1. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)**
+
+**2. 进入 Workers & Pages**
+
+左侧菜单 → "Workers & Pages"
+
+**3. 创建应用程序**
+
+点击 "Create application" → 选择 "Pages" → 点击 "Connect to Git"
+
+**4. 连接 GitHub 仓库**
+
+- 选择 `tmingjun/astro-startlight-blog`
+- 点击 "Connect"
+
+**5. 配置构建设置**
+
+| 设置项 | 值 |
+|:---|:---|
+| Production branch | `main` |
+| Build command | `npm run build` |
+| Build output directory | `dist` |
+
+**6. 部署**
+
+点击 "Save and Deploy"，等待构建完成。
+
+#### 方式三：通过命令行单独部署
+
+```bash
+# 构建
+npm run build
+
+# 创建 Cloudflare Pages 项目并部署
+npx wrangler pages project create astro-startlight-blog
+npx wrangler pages deploy dist/ --project-name=astro-startlight-blog
+```
+
+#### 配置自定义域名
+
+**1. 在 Cloudflare Dashboard 中**
+
+Workers & Pages → 选择你的项目 → "Custom domains" → "Set up a custom domain"
+
+**2. 添加域名**
+
+输入你的域名，按提示完成 DNS 配置即可。
+
 ## 更多资源
 
 - [Starlight 官方文档](https://starlight.astro.build/)
