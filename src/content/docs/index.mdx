@@ -1,40 +1,33 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: 欢迎来到个人文档库
+description: 记录学习与成长的知识库
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
+  tagline: 欢迎来到我的个人文档库，这里记录着我的学习笔记、技术文档和经验总结。
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: 快速开始
+      link: /guides/getting-started/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+    - text: 浏览文档
+      link: /reference/example/
+      icon: open-book
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## 开始使用
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="快速开始" icon="rocket">
+		查看 [快速开始指南](/guides/getting-started/) 了解如何开始使用。
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="添加内容" icon="pencil">
+		在 `src/content/docs` 目录下添加 Markdown 或 MDX 文件来创建新页面。
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="自定义配置" icon="setting">
+		编辑 `astro.config.mjs` 文件来自定义网站配置。
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="部署上线" icon="rocket">
+		将你的文档库部署到 GitHub Pages、Vercel 或 Netlify。
 	</Card>
 </CardGrid>

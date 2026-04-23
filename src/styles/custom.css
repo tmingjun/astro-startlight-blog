@@ -1,0 +1,8 @@
+/* 自定义样式 */
+:root {
+	--sl-font-system: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--sl-font-system);
+}
